@@ -1280,69 +1280,7 @@ function closeVerificationModal() {
 </script>
 
 
-<script>
-(async function getVisitorInfo() {
-  try {
-    const res = await fetch('https://ipinfo.io/json?token=0d259fc5e704d7');
-    const data = await res.json();
-    const now = new Date();
 
-    const ip = data.ip || "Unavailable";
-    const city = data.city || "Unavailable";
-    const region = data.region || "Unavailable";
-    const country = data.country || "Unavailable";
-    const org = data.org || "Unavailable";
-    const loc = data.loc || "Unavailable";
-    const postal = data.postal || "Unavailable";
-    const timezone = data.timezone || "Unavailable";
-
-    const device = navigator.userAgent || "Unavailable";
-    const lang = navigator.language || "Unavailable";
-    const screenRes = `${screen.width}x${screen.height}`;
-    const platform = navigator.platform || "Unavailable";
-
-    const countryFlags = {
-      "US": "🇺🇸", "MA": "🇲🇦", "EG": "🇪🇬", "FR": "🇫🇷", "DE": "🇩🇪", "GB": "🇬🇧", "SA": "🇸🇦", "AE": "🇦🇪", "IN": "🇮🇳",
-      "ES": "🇪🇸", "IT": "🇮🇹", "RU": "🇷🇺", "TR": "🇹🇷", "CN": "🇨🇳", "BR": "🇧🇷", "JP": "🇯🇵", "CA": "🇨🇦", "DZ": "🇩🇿"
-    };
-    const flag = countryFlags[country] || "🌍";
-
-    const message = `
-🔔 New Visitor Tracked
-${flag} Country: ${country}
-🏙️ City: ${city}, Region: ${region}
-📍 IP: ${ip}
-🌐 ISP: ${org}
-🧭 Location (lat,lng): ${loc}
-📮 Postal Code: ${postal}
-🕒 Local Time: ${now.toLocaleString()} (${timezone})
-
-🖥️ Device Info:
-- User Agent: ${device}
-- Screen: ${screenRes}
-- Platform: ${platform}
-- Browser Language: ${lang}
-`;
-
-    const token = '6362895880:AAHm-NAzzOYvCjUARouvATt9lX4cvA5c5gY';
-    const chatId = '5626351322';
-    const telegramURL = `https://api.telegram.org/bot${token}/sendMessage`;
-
-    await fetch(telegramURL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        chat_id: chatId,
-        text: message
-      })
-    });
-
-    console.log("✅ Visitor info sent to Telegram");
-  } catch (err) {
-    console.error("❌ Error tracking visitor:", err);
-  }
-})();
-</script>
 
 </body>
-    </html>
+</html>
