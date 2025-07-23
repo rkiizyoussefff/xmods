@@ -135,7 +135,42 @@
         font-size: 16px !important;
         padding: 12px 24px !important;
     }
-    </style>
+    
+#preloader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #007BFF, #00C6FF);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.loader-container {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+}
+
+.spinner {
+  border: 8px solid rgba(255,255,255,0.2);
+  border-top: 8px solid white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
 <meta content="Explore the top trending Minecraft mods in one place. Download, install, and enhance your gameplay instantly." name="description"/><meta content="Minecraft mods, download Minecraft mods, best Minecraft mods, Minecraft Forge, Minecraft gameplay" name="keywords"/><meta content="Minecraft Mods Hub" name="author"/><meta content="Top Minecraft Mods - Download Now" property="og:title"/><meta content="Discover powerful and fun Minecraft mods. Easy downloads and popular mod listings." property="og:description"/><meta content="https://i.pinimg.com/280x280_RS/73/2b/18/732b18af21ae72774c4a0f5c2a4edb45.jpg" property="og:image"/><meta content="website" property="og:type"/><meta content="https://yourdomain.com/minecraft-mods" property="og:url"/>
 <style>
 .animated-search {
@@ -206,8 +241,15 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 </head>
 <body style="background-color: #000; margin: 0; font-family: 'Segoe UI', sans-serif; color: white;">
+<div id="preloader">
+  <div class="loader-container">
+    <div class="spinner"></div>
+    <div class="loading-text">Loading... <span id="progress">0%</span></div>
+  </div>
+</div>
+
 <nav style="background-color:#1a1a1a; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000;">
-<div style="font-size: 20px; font-weight: bold; color: #00ffcc;">MC Mods Hub</div>
+
 <div>
 </div>
 </nav>
@@ -217,6 +259,19 @@ document.addEventListener('DOMContentLoaded', function () {
 </header>
 <!-- Font Awesome Icons; Make sure to add it in the <head> tag -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+
+<div id="download-instructions" style="background: #111; color: white; padding: 25px 20px; text-align: left; border-bottom: 1px solid #333;">
+  <h2 style="color: #00ffcc; margin-bottom: 10px;">📥 How to Download Mods from the Site</h2>
+  <ol style="line-height: 1.8; padding-left: 20px;">
+    <li>Search for the mod you want by name, e.g., <strong>the man who black</strong></li>
+    <li>Click on the mod, then click the download button</li>
+    <li>To ensure a secure download, the page will check if you're human. If verified, the download starts automatically. If not, you may be asked to complete 2 offers</li>
+    <li>Once done with the offers – congrats! The mod is yours 🎉</li>
+  </ol>
+  <p style="margin-top: 10px;"><strong>💡 HINT:</strong> All mods work on both PC and Mobile</p>
+  <p style="color: #888; font-size: 14px; margin-top: 10px;">Thanks for visiting ❤️</p>
+</div>
+
 <div class="animated-search">
 <div class="search-container">
 <i class="fas fa-search"></i>
@@ -1206,5 +1261,23 @@ function triggerLocker() {
 function closeVerificationModal() {
     document.getElementById('verificationModal').style.display = 'none';
 }
-</script><audio id="audio-click" preload="auto" style="display: none;"><source src="https://www.soundjay.com/button/sounds/button-16.mp3" type="audio/mpeg"/></audio><audio id="audio-download" preload="auto" style="display: none;"><source src="https://www.soundjay.com/button/sounds/button-09.mp3" type="audio/mpeg"/></audio><audio id="audio-error" preload="auto" style="display: none;"><source src="https://www.soundjay.com/button/sounds/beep-10.mp3" type="audio/mpeg"/></audio><audio id="audio-verify" preload="auto" style="display: none;"><source src="https://www.soundjay.com/button/sounds/button-3.mp3" type="audio/mpeg"/></audio></body>
+</script><audio id="audio-click" preload="auto" style="display: none;"><source src="https://www.soundjay.com/button/sounds/button-16.mp3" type="audio/mpeg"/></audio><audio id="audio-download" preload="auto" style="display: none;"><source src="https://www.soundjay.com/button/sounds/button-09.mp3" type="audio/mpeg"/></audio><audio id="audio-error" preload="auto" style="display: none;"><source src="https://www.soundjay.com/button/sounds/beep-10.mp3" type="audio/mpeg"/></audio><audio id="audio-verify" preload="auto" style="display: none;"><source src="https://www.soundjay.com/button/sounds/button-3.mp3" type="audio/mpeg"/></audio>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let progress = 0;
+    const interval = setInterval(() => {
+      progress++;
+      document.getElementById("progress").innerText = progress + "%";
+      if (progress >= 100) {
+        clearInterval(interval);
+        document.getElementById("preloader").style.opacity = "0";
+        setTimeout(() => {
+          document.getElementById("preloader").style.display = "none";
+        }, 500);
+      }
+    }, 20);
+  });
+</script>
+
+</body>
 </html>
