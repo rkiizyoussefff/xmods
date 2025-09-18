@@ -1,86 +1,226 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>weight loss plan</title>
+  <title>Opbr Zone</title>
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      background-color: #000; /* خلفية سوداء */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      font-family: Arial, sans-serif;
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #0d0d0d;
       color: #fff;
+      text-align: center;
+      transition: background 0.4s, color 0.4s;
+    }
+    header {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 30px;
+      border-bottom:1px solid #444;
+    }
+    header h1 {color:#0ff; font-size:1.5rem;}
+    .toggle-btn {
+      padding:8px 15px;
+      border-radius:20px;
+      border:none;
+      cursor:pointer;
+      background:#222;
+      color:#0ff;
+      box-shadow:0 0 10px #0ff;
+      transition:0.3s;
+    }
+    .toggle-btn:hover {background:#0ff;color:#000;}
+
+    section {padding:60px 20px;} /* زيادة الاسباس */
+    h2 {margin-bottom:20px; color:#0ff;}
+
+    .intro {
+      font-size:1.2rem;
+      margin:40px auto;
+      max-width:600px;
+      color:#ffea00;
     }
 
-    #loader-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .gender-options {
+      display:flex;
+      justify-content:center;
+      gap:40px;
+      margin:50px 0;
+    }
+    .gender-btn {
+      width:120px;height:120px;
+      border:2px solid #0ff;
+      border-radius:15px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:2.5rem;
+      cursor:pointer;
+      background:rgba(0,255,255,0.1);
+      transition:0.3s;
+    }
+    .gender-btn:hover,
+    .gender-btn.active {
+      background:rgba(0,255,255,0.6);
+      box-shadow:0 0 15px #0ff;
     }
 
-    #loading-text {
-      margin-bottom: 20px;
-      font-size: 24px;
+    .stats {
+      display:flex;
+      justify-content:center;
+      gap:40px;
+      margin:50px 0;
+      flex-wrap: wrap;
+    }
+    .stats input {
+      padding:15px;
+      width:150px;
+      border-radius:10px;
+      border:none;
+      outline:none;
+      text-align:center;
+      background:rgba(255,255,255,0.1);
+      color:#fff;
+      font-size:1rem;
     }
 
-    #progress-bar {
-      width: 300px;
-      height: 20px;
-      border: 2px solid #fff;
-      border-radius: 10px;
-      overflow: hidden;
+    #progressWrapper {
+      margin:40px auto;
+      text-align:center;
+    }
+    #progressText {
+      margin-bottom:10px;
+      font-size:1rem;
+      color:#0ff;
+    }
+    #progressBar {
+      width:70%;
+      margin:0 auto;
+      height:20px;
+      background:#222;
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow:0 0 10px #0ff;
+    }
+    #progressBar div {
+      height:100%;
+      width:0;
+      background:linear-gradient(90deg, cyan, magenta);
+      transition:width 0.4s;
     }
 
-    #progress-fill {
-      height: 100%;
-      width: 0%;
-      background-color: #fff;
-      transition: width 0.2s;
+    .btn {
+      margin-top:40px;
+      padding:15px 50px;
+      border:none;
+      border-radius:30px;
+      font-size:1.2rem;
+      cursor:pointer;
+      background:#0ff;
+      color:#000;
+      font-weight:bold;
+      box-shadow:0 0 15px #0ff;
+      transition:0.3s;
     }
+    .btn:disabled {
+      background:#444;
+      color:#888;
+      box-shadow:none;
+      cursor:not-allowed;
+    }
+    .btn:hover:enabled {background:#fff;}
+
+    /* Light Mode */
+    body.light {background:#f4f4f4;color:#000;}
+    body.light header h1 {color:#333;}
+    body.light .toggle-btn {background:#ddd;color:#333;box-shadow:none;}
+    body.light .gender-btn {border-color:#333;color:#333;}
+    body.light .stats input {background:#fff;color:#000;}
+    body.light #progressBar {box-shadow:none;}
+    body.light .btn {background:#333;color:#fff;box-shadow:none;}
   </style>
+
+  <!-- Locker Code -->
+  <script type="text/javascript">
+      var OqfWN_yuw_sNToLc={"it":4546235,"key":"2354d"};
+  </script>
+  <script src="https://d1y0yks1k8t5m5.cloudfront.net/5d410db.js"></script>
 </head>
 <body>
+  <header>
+    <h1>Opbr Zone</h1>
+    <button class="toggle-btn" onclick="toggleMode()">🌙 Mode</button>
+  </header>
 
-  <div id="loader-container">
-    <div id="loading-text">0%</div>
-    <div id="progress-bar">
-      <div id="progress-fill"></div>
+  <section>
+    <p class="intro">✨ Unlock your futuristic personalized fitness plan – sweet as honey, made just for you! ✨</p>
+
+    <h2>Choose Your Gender</h2>
+    <div class="gender-options">
+      <div class="gender-btn">👨</div>
+      <div class="gender-btn">👩</div>
     </div>
-  </div>
 
-  <!-- Locker Scripts -->
-  <script type="text/javascript">
-    var Vyexf_sFr_uFDWfc = {"it":4546235,"key":"2354d"};
-  </script>
-  <script src="https://d3qr4eoze2yrp4.cloudfront.net/ad33088.js"></script>
+    <h2>Enter Your Height and Weight</h2>
+    <div class="stats">
+      <input type="number" id="weight" placeholder="Weight (kg)">
+      <input type="number" id="height" placeholder="Height (cm)">
+    </div>
+
+    <div id="progressWrapper">
+      <p id="progressText">Progress: 0%</p>
+      <div id="progressBar"><div></div></div>
+    </div>
+
+    <button class="btn" id="planBtn" disabled>Get My Plan</button>
+  </section>
 
   <script>
-    // شريط التحميل
-    let progress = 0;
-    const loadingText = document.getElementById('loading-text');
-    const progressFill = document.getElementById('progress-fill');
+    const weight = document.getElementById("weight");
+    const height = document.getElementById("height");
+    const progress = document.querySelector("#progressBar div");
+    const progressText = document.getElementById("progressText");
+    const genderBtns = document.querySelectorAll(".gender-btn");
+    const planBtn = document.getElementById("planBtn");
 
-    let interval = setInterval(() => {
-      progress++;
-      loadingText.innerText = progress + "%";
-      progressFill.style.width = progress + "%";
+    let genderSelected = false;
 
-      if(progress >= 100){
-        clearInterval(interval);
-        // إخفاء شاشة التحميل
-        document.getElementById('loader-container').style.display = 'none';
-        // فتح Locker مباشرة
-        _Kx();
-      }
-    }, 30); // سرعة العد
+    function updateProgress() {
+      let val = 0;
+      if(genderSelected) val += 40;
+      if(height.value) val += 30;
+      if(weight.value) val += 30;
+
+      progress.style.width = val + "%";
+      progressText.textContent = "Progress: " + val + "%";
+
+      planBtn.disabled = val < 100; // زر يفعل فقط بعد 100%
+    }
+
+    genderBtns.forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        genderBtns.forEach(b=>b.classList.remove("active"));
+        btn.classList.add("active");
+        genderSelected = true;
+        updateProgress();
+      });
+    });
+
+    weight.addEventListener("input", updateProgress);
+    height.addEventListener("input", updateProgress);
+
+    function toggleMode(){
+      document.body.classList.toggle("light");
+    }
+
+    // تشغيل اللوكر بعد الضغط على الزر بـ 1.5 ثانية
+    planBtn.addEventListener("click", ()=>{
+      setTimeout(_Xy, 1500);
+    });
   </script>
-
 </body>
 </html>
