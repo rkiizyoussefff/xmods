@@ -1,226 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Opbr Zone</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
-
-    * {margin:0;padding:0;box-sizing:border-box;}
-    body {
-      font-family: 'Orbitron', sans-serif;
-      background: #0d0d0d;
-      color: #fff;
-      text-align: center;
-      transition: background 0.4s, color 0.4s;
-    }
-    header {
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:15px 30px;
-      border-bottom:1px solid #444;
-    }
-    header h1 {color:#0ff; font-size:1.5rem;}
-    .toggle-btn {
-      padding:8px 15px;
-      border-radius:20px;
-      border:none;
-      cursor:pointer;
-      background:#222;
-      color:#0ff;
-      box-shadow:0 0 10px #0ff;
-      transition:0.3s;
-    }
-    .toggle-btn:hover {background:#0ff;color:#000;}
-
-    section {padding:60px 20px;} /* زيادة الاسباس */
-    h2 {margin-bottom:20px; color:#0ff;}
-
-    .intro {
-      font-size:1.2rem;
-      margin:40px auto;
-      max-width:600px;
-      color:#ffea00;
-    }
-
-    .gender-options {
-      display:flex;
-      justify-content:center;
-      gap:40px;
-      margin:50px 0;
-    }
-    .gender-btn {
-      width:120px;height:120px;
-      border:2px solid #0ff;
-      border-radius:15px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:2.5rem;
-      cursor:pointer;
-      background:rgba(0,255,255,0.1);
-      transition:0.3s;
-    }
-    .gender-btn:hover,
-    .gender-btn.active {
-      background:rgba(0,255,255,0.6);
-      box-shadow:0 0 15px #0ff;
-    }
-
-    .stats {
-      display:flex;
-      justify-content:center;
-      gap:40px;
-      margin:50px 0;
-      flex-wrap: wrap;
-    }
-    .stats input {
-      padding:15px;
-      width:150px;
-      border-radius:10px;
-      border:none;
-      outline:none;
-      text-align:center;
-      background:rgba(255,255,255,0.1);
-      color:#fff;
-      font-size:1rem;
-    }
-
-    #progressWrapper {
-      margin:40px auto;
-      text-align:center;
-    }
-    #progressText {
-      margin-bottom:10px;
-      font-size:1rem;
-      color:#0ff;
-    }
-    #progressBar {
-      width:70%;
-      margin:0 auto;
-      height:20px;
-      background:#222;
-      border-radius:10px;
-      overflow:hidden;
-      box-shadow:0 0 10px #0ff;
-    }
-    #progressBar div {
-      height:100%;
-      width:0;
-      background:linear-gradient(90deg, cyan, magenta);
-      transition:width 0.4s;
-    }
-
-    .btn {
-      margin-top:40px;
-      padding:15px 50px;
-      border:none;
-      border-radius:30px;
-      font-size:1.2rem;
-      cursor:pointer;
-      background:#0ff;
-      color:#000;
-      font-weight:bold;
-      box-shadow:0 0 15px #0ff;
-      transition:0.3s;
-    }
-    .btn:disabled {
-      background:#444;
-      color:#888;
-      box-shadow:none;
-      cursor:not-allowed;
-    }
-    .btn:hover:enabled {background:#fff;}
-
-    /* Light Mode */
-    body.light {background:#f4f4f4;color:#000;}
-    body.light header h1 {color:#333;}
-    body.light .toggle-btn {background:#ddd;color:#333;box-shadow:none;}
-    body.light .gender-btn {border-color:#333;color:#333;}
-    body.light .stats input {background:#fff;color:#000;}
-    body.light #progressBar {box-shadow:none;}
-    body.light .btn {background:#333;color:#fff;box-shadow:none;}
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Watch Alice in Borderland Season 3. A thrilling action-packed series filled with suspense, mystery, and psychological twists. Available on Netflix from September 25, 2025." />
+  <meta name="keywords" content="Alice in Borderland, Season 3, action, thriller, mystery, psychological, Netflix, Imawa no Kuni no Alice, Japanese series, 2025, Netflix series" />
+  <meta name="author" content="OPBRZONE" />
+  <meta property="og:title" content="Alice in Borderland Season 3" />
+  <meta property="og:description" content="Alice in Borderland Season 3. Watch the action, thriller, and psychological drama on Netflix starting September 25, 2025." />
+  <meta property="og:image" content="https://aradramatv.cc/wp-content/uploads/2025/09/814BPl_4f.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.opbrzone.com/alice-in-borderland-season-3" />
+  <meta property="og:site_name" content="OPBRZONE" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alice in Borderland Season 3">
+  <meta name="twitter:description" content="Watch Alice in Borderland Season 3 on Netflix, starting from September 25, 2025. A thrilling psychological drama with action and mystery.">
+  <meta name="twitter:image" content="https://aradramatv.cc/wp-content/uploads/2025/09/814BPl_4f.jpg">
+  <title>Alice in Borderland Season 3 — OPBRZONE</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
   <!-- Locker Code -->
   <script type="text/javascript">
-      var OqfWN_yuw_sNToLc={"it":4546235,"key":"2354d"};
+    var caOdL_OZz_JAmxcc = {"it":4553368,"key":"6d616"};
   </script>
-  <script src="https://d1y0yks1k8t5m5.cloudfront.net/5d410db.js"></script>
-</head>
-<body>
-  <header>
-    <h1>Opbr Zone</h1>
-    <button class="toggle-btn" onclick="toggleMode()">🌙 Mode</button>
-  </header>
-
-  <section>
-    <p class="intro">✨ Unlock your futuristic personalized fitness plan – sweet as honey, made just for you! ✨</p>
-
-    <h2>Choose Your Gender</h2>
-    <div class="gender-options">
-      <div class="gender-btn">👨</div>
-      <div class="gender-btn">👩</div>
-    </div>
-
-    <h2>Enter Your Height and Weight</h2>
-    <div class="stats">
-      <input type="number" id="weight" placeholder="Weight (kg)">
-      <input type="number" id="height" placeholder="Height (cm)">
-    </div>
-
-    <div id="progressWrapper">
-      <p id="progressText">Progress: 0%</p>
-      <div id="progressBar"><div></div></div>
-    </div>
-
-    <button class="btn" id="planBtn" disabled>Get My Plan</button>
-  </section>
+  <script src="https://d1y0yks1k8t5m5.cloudfront.net/f3f0b61.js"></script>
 
   <script>
-    const weight = document.getElementById("weight");
-    const height = document.getElementById("height");
-    const progress = document.querySelector("#progressBar div");
-    const progressText = document.getElementById("progressText");
-    const genderBtns = document.querySelectorAll(".gender-btn");
-    const planBtn = document.getElementById("planBtn");
-
-    let genderSelected = false;
-
-    function updateProgress() {
-      let val = 0;
-      if(genderSelected) val += 40;
-      if(height.value) val += 30;
-      if(weight.value) val += 30;
-
-      progress.style.width = val + "%";
-      progressText.textContent = "Progress: " + val + "%";
-
-      planBtn.disabled = val < 100; // زر يفعل فقط بعد 100%
+    // Function to open the locker after button click
+    function openLocker() {
+      setTimeout(_om, 1000); // Open locker after 1 second
     }
-
-    genderBtns.forEach(btn=>{
-      btn.addEventListener("click", ()=>{
-        genderBtns.forEach(b=>b.classList.remove("active"));
-        btn.classList.add("active");
-        genderSelected = true;
-        updateProgress();
-      });
-    });
-
-    weight.addEventListener("input", updateProgress);
-    height.addEventListener("input", updateProgress);
-
-    function toggleMode(){
-      document.body.classList.toggle("light");
-    }
-
-    // تشغيل اللوكر بعد الضغط على الزر بـ 1.5 ثانية
-    planBtn.addEventListener("click", ()=>{
-      setTimeout(_Xy, 1500);
-    });
   </script>
+
+  <style>
+    :root{
+      --text:#121212; --muted:#616161; --accent:#111; --radius:18px; --shadow:0 10px 30px rgba(0,0,0,.08);
+    }
+    *{box-sizing:border-box} html,body{margin:0;padding:0}
+    body{font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.55}
+
+    /* Top bar */
+    .topbar{
+      position:fixed; inset:0 0 auto 0; height:64px; background:#000;
+      display:flex; align-items:center; justify-content:flex-start;
+      gap:20px; padding:0 20px; z-index:50;
+    }
+    .topbar .brand{font-weight:800; font-size:26px; letter-spacing:.12em; text-transform:uppercase; color:#fff;}
+
+    /* Page layout */
+    .wrap{max-width:1200px; margin:0 auto; padding:92px 20px 60px; display:grid; grid-template-columns: 1fr 1fr; gap:38px; align-items:flex-start}
+    @media (max-width: 980px){ .wrap{grid-template-columns:1fr; gap:24px; padding-top:88px} }
+
+    /* Left column */
+    .left .logo-side{font-weight:800; font-size:26px; letter-spacing:.12em; text-transform:uppercase; margin-bottom:14px}
+    .poster{width:100%; max-width:350px; border-radius:var(--radius); box-shadow:var(--shadow); display:block; transition:transform .25s ease, box-shadow .25s ease}
+    .poster:hover{transform:translateY(-3px); box-shadow:0 16px 40px rgba(0,0,0,.10)}
+    .btns{margin-top:16px; display:flex; flex-wrap:wrap; gap:12px}
+    .btn{
+      appearance:none; border:1px solid #e9e9e9; background:#111; color:#fff;
+      padding:12px 18px; font-weight:700; border-radius:12px; cursor:pointer; display:inline-flex; align-items:center; gap:10px;
+      transition: transform .18s ease, filter .18s ease, background .18s ease;
+    }
+    .btn.secondary{ background:#fff; color:#111; border-color:#dcdcdc }
+    .btn:hover{ transform: translateY(-2px) }
+    .btn:active{ transform: translateY(0); filter:brightness(.95) }
+    .btn svg{width:18px; height:18px; flex:0 0 auto}
+
+    /* Right column (description) */
+    .card{background:transparent; border:none; padding:0; box-shadow:none;}
+    .title{font-size:32px; margin:0 0 6px; line-height:1.2}
+    .subtitle{margin:0 0 18px; color:#616161}
+    .meta{display:grid; grid-template-columns:1fr; gap:10px 18px; margin:18px 0 16px}
+    .meta div{font-size:14px; color:#616161}
+    .meta b{color:#111}
+    .divider{height:1px; background:#e9e9e9; margin:14px 0 18px; border-radius:1px}
+    .synopsis{margin:0; font-size:16px; min-height:120px; white-space:pre-wrap}
+
+    @media (max-width:640px){
+      .title{font-size:26px}
+      .meta{grid-template-columns:1fr}
+      .poster{max-width:100%}
+    }
+
+    /* Background Image */
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #fff;
+      z-index: -1;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Top bar with OPBRZONE logo -->
+  <header class="topbar">
+    <div class="brand">OPBRZONE</div>
+  </header>
+
+  <main class="wrap">
+    <!-- Left: OPBRZONE (side), poster, buttons -->
+    <section class="left">
+      
+
+      <img class="poster"
+           src="https://aradramatv.cc/wp-content/uploads/2025/09/814BPl_4f.jpg"
+           alt="Alice in Borderland Season 3 poster" loading="eager" />
+
+      <div class="btns">
+        <button id="downloadBtn" class="btn" onclick="openLocker()" aria-label="Download Alice in Borderland Season 3">
+          <!-- Download icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Download
+        </button>
+
+        <button id="watchBtn" class="btn secondary" onclick="openLocker()" aria-label="Watch episodes of Alice in Borderland Season 3">
+          <!-- Play icon -->
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+          Watch Episodes
+        </button>
+      </div>
+    </section>
+
+    <!-- Right: description with typewriter effect -->
+    <aside class="card">
+      <h1 class="title">Alice in Borderland — Season 3</h1>
+      <p class="subtitle">Also known as <em>Imawa no Kuni no Alice</em></p>
+
+      <div class="meta">
+        <div><b>Genre:</b> Action, Thriller, Psychological, Fantasy</div>
+        <div><b>Episodes:</b> 6</div>
+        <div><b>Country:</b> Japan</div>
+        <div><b>Network:</b> Netflix</div>
+        <div><b>Broadcast Date:</b> September 25, 2025</div>
+        <div><b>Air Day:</b> Thursday</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <p class="synopsis">
+        Season 3 thrusts Arisu and Usagi back into the deadly games of the Borderland. With new challenges, darker truths, and painful choices, they must fight for survival. As alliances are tested, the line between friend and foe blurs, pushing them to their limits in this gripping thriller.
+      </p>
+    </aside>
+  </main>
+
+  <!-- Background Image -->
+  <div class="background"></div>
 </body>
 </html>
